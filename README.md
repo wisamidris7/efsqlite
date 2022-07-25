@@ -92,10 +92,10 @@
 
 # Preview You Can Edit The Theme
 
-<img src="./pictures/1.png" height=500/> 
-<img src="./pictures/2.png" height=500/> 
-<img src="./pictures/3.png" height=500/> 
-<img src="./pictures/4.png" height=500/> 
+<img src="https://raw.githubusercontent.com/wisamidris7/efsqlite/master/pictures/1.png" height=500/> 
+<img src="https://raw.githubusercontent.com/wisamidris7/efsqlite/master/pictures/2.png" height=500/> 
+<img src="https://raw.githubusercontent.com/wisamidris7/efsqlite/master/pictures/3.png" height=500/> 
+<img src="https://raw.githubusercontent.com/wisamidris7/efsqlite/master/pictures/4.png" height=500/> 
 
 ## database.dart
 
@@ -202,7 +202,7 @@
 
 ## Preview Result You Can Edit The Theme
 
-<img src="./pictures/5.png" height=700/> 
+<img src="https://raw.githubusercontent.com/wisamidris7/efsqlite/master/pictures/5.png" height=700/> 
 
 ## If We Edit isDrawer
 
@@ -211,4 +211,4 @@
         isDrawer: false,
     ));
 
-<img src="./pictures/6.png" height=700/>
+<img src="https://raw.githubusercontent.com/wisamidris7/efsqlite/master/pictures/6.png" height=700/>

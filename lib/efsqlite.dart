@@ -514,7 +514,7 @@ class SqliteQuery<T extends IModel> extends ISqliteQuery<T> {
 
   @override
   Future<void> Add(T item) async {
-    var database = await sqliteCommands.DBLoad();
+    var database = await SqliteCommands(sqliteData: data).DBLoad();
     var items = await Get();
     var id = table.primrayKeyType == PrimaryKeyEnum.AutoIncrement
         ? (items.isEmpty ? 1 : table.primaryKeyGet(items.last) + 1)
@@ -1593,9 +1593,7 @@ typedef CreateNewInstance<S extends ISqliteQuery> = S Function(
 abstract class Provider<S extends ISqliteQuery> {
   Provider(this.data, this.createInstance) {
     tables = data.tables;
-    sqliteCommands = sqliteCommands;
   }
-  late SqliteCommands sqliteCommands;
 
   /// [data] Has DB Data
   SqliteData data;
@@ -1618,7 +1616,7 @@ abstract class Provider<S extends ISqliteQuery> {
 
   /// [removeDB] Removing DB File From App Data
   Future<void> removeDB() async {
-    var database = await sqliteCommands.DBLoad();
+    var database = await SqliteCommands(sqliteData: data).DBLoad();
     await closeDB();
     await deleteDatabase(database.path);
   }
@@ -1637,12 +1635,12 @@ abstract class Provider<S extends ISqliteQuery> {
 
   /// [openDB] Opening DB
   Future<Database> openDB() async {
-    return await sqliteCommands.DBLoad();
+    return await SqliteCommands(sqliteData: data).DBLoad();
   }
 
   /// [closeDB] Closing DB
   Future<void> closeDB() async {
-    var database = await sqliteCommands.DBLoad();
+    var database = await SqliteCommands(sqliteData: data).DBLoad();
     if (database.isOpen) {
       await EFPrinter.printing(database, "Database Closed Successfully", data);
       await database.close();
@@ -1658,7 +1656,7 @@ abstract class Provider<S extends ISqliteQuery> {
   /// };
   /// ```
   Future<Map<String, String>> getTables() async {
-    var database = await sqliteCommands.DBLoad();
+    var database = await SqliteCommands(sqliteData: data).DBLoad();
     var list = await database.query("EFTables");
     Map<String, String> res = {};
     for (var element in list) {
@@ -1704,7 +1702,7 @@ abstract class Provider<S extends ISqliteQuery> {
 
   /// [Execute] For Execute An Action
   Future<void> Execute(String sql) async {
-    var database = await sqliteCommands.DBLoad();
+    var database = await SqliteCommands(sqliteData: data).DBLoad();
     await database.execute(sql);
     await EFPrinter.printing(database, "Executed Sql Command", data);
   }

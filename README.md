@@ -14,6 +14,12 @@
 - Default Items For Tables
 - Auto Indexing
 
+https://dev-wsmwebsite.pantheonsite.io/
+https://dev-wsmwebsite.pantheonsite.io/efsqlite
+
+## Link For Youtube Docs
+https://www.youtube.com/watch?v=JDz-EsoCzkA
+
 ## Import efsqlite.dart
 
      import '../../efsqlite.dart';

@@ -1,4 +1,4 @@
-import 'package:efsqlite/efsqlite.dart';
+import '../../efsqlite.dart';
 
 /// [IModel] You Should To extends From Him To Model It's So Important
 abstract class IModel {

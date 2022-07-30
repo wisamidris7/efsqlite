@@ -1,4 +1,4 @@
-import 'package:efsqlite/efsqlite.dart';
+import '../../efsqlite.dart';
 
 /// [SqliteData] has all data like tables
 ///

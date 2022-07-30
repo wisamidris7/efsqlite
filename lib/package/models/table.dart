@@ -1,5 +1,6 @@
-import 'package:efsqlite/efsqlite.dart';
-import 'package:sqflite/sqflite.dart';
+// ignore_for_file: non_constant_identifier_names
+
+import '../../efsqlite.dart';
 
 typedef PrimaryKeyGetDelegate<T> = dynamic Function(T item);
 typedef PrimaryKeySetDelegate<T> = void Function(T item, dynamic id);

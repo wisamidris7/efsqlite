@@ -16,7 +16,7 @@
 
 ## Import efsqlite.dart
 
-     import 'package:efsqlite/efsqlite.dart';
+     import '../../efsqlite.dart';
 
 ## Create Class (database.dart)
 
@@ -99,7 +99,7 @@
 
 ## database.dart
 
-    import 'package:efsqlite/efsqlite.dart';
+    import '../../efsqlite.dart';
 
     class Todo extends IModel {
         Todo({this.id, this.name, this.isDone});
@@ -169,7 +169,7 @@
 
     import './database.dart';
     import 'package:flutter/material.dart';
-    import 'package:efsqlite/efsqlite.dart';
+    import '../../efsqlite.dart';
 
     void main() {
         runApp(EfMaterialApp(

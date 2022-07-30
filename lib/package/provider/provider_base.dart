@@ -1,6 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
 
-import 'package:efsqlite/efsqlite.dart';
+import '../../efsqlite.dart';
 
 /// [ProviderBase] To Provider From One Model
 abstract class ProviderBase<S extends ISqliteQuery<I>, I extends IModel> {

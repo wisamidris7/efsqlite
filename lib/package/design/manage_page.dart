@@ -1,4 +1,6 @@
-import 'package:efsqlite/efsqlite.dart';
+// ignore_for_file: non_constant_identifier_names, must_be_immutable, sized_box_for_whitespace, use_build_context_synchronously, avoid_function_literals_in_foreach_calls
+
+import '../../efsqlite.dart';
 import 'package:flutter/material.dart';
 
 /// [ManagePage] Is For A One Page
@@ -47,7 +49,7 @@ class _ManagePageState<T extends IModel> extends State<ManagePage<T>> {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             SingleChildScrollView(
@@ -62,7 +64,7 @@ class _ManagePageState<T extends IModel> extends State<ManagePage<T>> {
                   return DataRow(
                     onLongPress: () async {
                       var dialog =
-                          await AddEditDialog(context, isEdit: true, item: e);
+                          AddEditDialog(context, isEdit: true, item: e);
                       await showDialog(
                           context: context, builder: (context) => dialog);
                       Refresh();
@@ -87,7 +89,7 @@ class _ManagePageState<T extends IModel> extends State<ManagePage<T>> {
           );
           Refresh();
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
@@ -121,10 +123,10 @@ class _ManagePageState<T extends IModel> extends State<ManagePage<T>> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ...(textFields).SelectMulti(() => SizedBox(
+                ...(textFields).SelectMulti(() => const SizedBox(
                       height: 10,
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 ElevatedButton(
@@ -151,7 +153,7 @@ class _ManagePageState<T extends IModel> extends State<ManagePage<T>> {
                                 widget.query.table.primaryKeyGet(item!));
                             Navigator.of(context).pop();
                           },
-                          child: Text("Delete"),
+                          child: const Text("Delete"),
                         )
                       ]
                     : [],
@@ -165,6 +167,7 @@ class _ManagePageState<T extends IModel> extends State<ManagePage<T>> {
 
   T fromControllerToModel(List<Map<String, dynamic>> list) {
     T item = widget.query.table.newEmptyObject();
+    // ignore: prefer_function_declarations_over_variables
     var convert = (elem) {
       var element = widget.query.table.properties!
           .firstWhere((element) => element.name == elem['label'].toString());
@@ -188,9 +191,9 @@ class _ManagePageState<T extends IModel> extends State<ManagePage<T>> {
 }
 
 extension WidgetsList on List<Widget> {
-  List<Widget> SelectMulti(Widget seprator()) {
+  List<Widget> SelectMulti(Widget Function() seprator) {
     List<Widget> res = [];
-    for (var i = 0; i < this.length; i++) {
+    for (var i = 0; i < length; i++) {
       res.add(this[i]);
       res.add(seprator());
     }

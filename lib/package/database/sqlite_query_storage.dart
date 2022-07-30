@@ -1,6 +1,6 @@
 // ignore_for_file: overridden_fields, non_constant_identifier_names
 
-import 'package:efsqlite/efsqlite.dart';
+import '../../efsqlite.dart';
 
 /// [SqliteQueryStorage] Class Is Just Add The Events In Place
 ///

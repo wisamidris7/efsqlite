@@ -28,3 +28,7 @@ export './package/models/table.dart';
 // provider
 export './package/provider/provider.dart';
 export './package/provider/provider_base.dart';
+
+// design
+export './package/design/ef_home_page.dart';
+export './package/design/manage_page.dart';

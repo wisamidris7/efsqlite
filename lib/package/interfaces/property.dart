@@ -1,4 +1,4 @@
-import 'package:efsqlite/efsqlite.dart';
+import '../../efsqlite.dart';
 
 abstract class PropertyEnum {
   const PropertyEnum(this.name, this.type, {this.isIndexed = false});

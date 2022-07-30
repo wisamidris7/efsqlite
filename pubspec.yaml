@@ -1,7 +1,7 @@
 name: efsqlite
 description: Package For Management Your Database Easy For Flutter And Dart EF sqlite Manage And With Entity Framework And Auto Map No Generator
 homepage: https://github.com/wisamidris7/efsqlite
-version: 1.0.2
+version: 1.0.3
 
 environment:
   sdk: ">=2.17.1 <3.0.0"

@@ -2,7 +2,7 @@
 
 import 'dart:math';
 import 'package:sqflite/sqflite.dart';
-import 'package:efsqlite/efsqlite.dart';
+import '../../efsqlite.dart';
 
 class EFPrinter {
   /// Print The Text And Save It In Database

@@ -1,11 +1,11 @@
 // ignore_for_file: overridden_fields, non_constant_identifier_names
 
-import 'package:efsqlite/efsqlite.dart';
+import '../../efsqlite.dart';
 
 /// [SqliteQuery] Class Is For Any Action
 class SqliteQuery<T extends IModel> extends ISqliteQuery<T> {
   SqliteQuery({required this.data, required this.table})
-      : super(data: data, table: table) {}
+      : super(data: data, table: table);
 
   /// [data] For Data Like Tables And Other
 

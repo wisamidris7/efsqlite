@@ -1,6 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
 
-import 'package:efsqlite/efsqlite.dart';
+import '../../efsqlite.dart';
 
 extension ModelExtensions<T extends IModel> on IModel {
   /// [toMap] Fuction For Convert From Item To Map

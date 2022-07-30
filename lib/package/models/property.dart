@@ -1,4 +1,4 @@
-import 'package:efsqlite/efsqlite.dart';
+import '../../efsqlite.dart';
 
 typedef PropertyGetDelegate<V, T extends IModel> = V Function(T item);
 typedef PropertySetDelegate<I extends IModel, T> = void Function(

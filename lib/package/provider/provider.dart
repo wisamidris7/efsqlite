@@ -1,7 +1,8 @@
-// ignore_for_file: depend_on_referenced_packages, non_constant_identifier_names, avoid_function_literals_in_foreach_calls
+// ignore_for_file: depend_on_referenced_packages, non_constant_identifier_names, avoid_function_literals_in_foreach_calls, unused_local_variable
 
-import 'package:efsqlite/efsqlite.dart';
 import 'package:sqflite/sqflite.dart';
+
+import '../../efsqlite.dart';
 
 typedef CreateNewInstance<S extends ISqliteQuery> = S Function(
     SqliteData data, EFTable table);

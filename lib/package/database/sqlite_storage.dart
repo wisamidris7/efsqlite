@@ -1,7 +1,5 @@
 // ignore_for_file: non_constant_identifier_names
 
-import 'package:efsqlite/efsqlite.dart';
-
 class SqliteStorage {
   static List<ActionModelStorage> Actions = [];
   static int EndId = 0;

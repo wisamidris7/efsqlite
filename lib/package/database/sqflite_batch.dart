@@ -1,6 +1,6 @@
 // ignore_for_file: overridden_fields, non_constant_identifier_names
 
-import 'package:efsqlite/efsqlite.dart';
+import '../../efsqlite.dart';
 import 'package:sqflite/sqflite.dart';
 
 class SqfliteBatch<T extends IModel> {

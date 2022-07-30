@@ -1,8 +1,7 @@
-import 'package:efsqlite/efsqlite.dart';
-import 'package:efsqlite/package/design/manage_page.dart';
+// ignore_for_file: must_be_immutable, prefer_const_constructors, use_function_type_syntax_for_parameters
+
+import '../../efsqlite.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 /// [EfMaterialApp] For If You Want To Complate App With Drawer Or BottomNB
 class EfMaterialApp extends StatefulWidget {

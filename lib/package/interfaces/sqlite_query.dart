@@ -1,6 +1,6 @@
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, avoid_renaming_method_parameters
 
-import 'package:efsqlite/efsqlite.dart';
+import '../../efsqlite.dart';
 
 abstract class ISqliteQuery<T extends IModel> {
   ISqliteQuery({required this.data, required this.table});
